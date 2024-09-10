@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=car_rest_service
+
+    username: postgres
+    password: 1111
+
+  application:
+    name: car-rest-service
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        default_schema: car_rest_service
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: debug
+    spring:
+
+
